@@ -56,6 +56,41 @@ while True:
                 # Add note that the file is successfully chosen.
                 print(f"\n{file_name.title()} is successfully chosen.\n")
 
+                while True:
+
+                    # Allow users to create question.
+                    question = input("Enter the question: ")
+
+                    # Add the question in file.
+                    access_file = open(file_name, "a")
+                    access_file.write(f"\nQuestion: {question}\n")
+                    access_file.close()
+
+                    # Allow users to add choices.
+                    for i in range(4):
+                        choice = input(f"Choice {chr(65 + i )}:")
+
+                        # Add the choices in file.
+                        access_file = open(file_name, "a")
+                        access_file.write(f"{chr(65 + i)}.) {choice}\n")
+                        access_file.close()
+
+                    # Allow users to input the correct answer
+                    answer = input("Enter the correct letter(answer): ")
+
+                    # Add the answer in file.
+                    if answer == "A" or answer == "B" or answer == "C" or answer == "D":
+                        access_file = open(file_name, "a")
+                        access_file.write(f"Answer: {answer}\n\n")
+                        access_file.close()
+
+                    # Catch the invalid answer.
+                    else:
+                        print("Input a valid letter")
+
+                    # Inform the users that the message is successfully added.
+                    print("The question set is successfully added.")
+
             except ValueError:
                 print("\nInvalid Input. Please, try again.\n")
 
