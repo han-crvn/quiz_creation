@@ -1,8 +1,9 @@
 # Import libraries that will be needed.
+import os
 
 while True:
     try:
-        print("Selection:")
+        print("\nSelection:")
         print("1. Add Category \n2. Access a category \n3. Exit \n")
 
         # Allow users to interact with the option.
@@ -12,7 +13,7 @@ while True:
         if choice == 1:
             
             # Allow users to add the name of the category
-            category = input("Enter the name of category: ")
+            category = input("\nEnter the name of category: ")
 
             # Format the category name to its file name.
             file_name = "_".join(category.lower().split()) + ".txt"
@@ -25,11 +26,24 @@ while True:
             myFile.close()
 
             # Add a short description that the file is successfully added.
-            print(f"{category} is successfully saved as {file_name}.")
-            
+            print(f"\n{category} is successfully saved as {file_name}.\n")
+
         # If users choose 2 allow them to access file and add questions.
-        if choice == 2:
-            pass
+        elif choice == 2:
+            
+            # Access the category files.
+            categories = [file for file in os.listdir() if file.startswith("category")]
+
+            # Check if their is present categories or not.
+            if not categories:
+                print("\nThere are currently no categories present in this program.\n")
+
+            if categories:
+                print("\nCurrent Categories: ")
+
+                # List down the categories
+                for num, file in enumerate(categories, 1):
+                    print(f"{num}.) {file}")
         
         # if users choose 3 they will be able to leave the program.
         elif choice == 3:
