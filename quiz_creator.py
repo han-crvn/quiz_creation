@@ -3,7 +3,7 @@ import os
 
 while True:
     try:
-        print("\nSelection:")
+        print("Selection:")
         print("1. Add Category \n2. Access a category \n3. Exit \n")
 
         # Allow users to interact with the option.
@@ -44,7 +44,21 @@ while True:
                 # List down the categories
                 for num, file in enumerate(categories, 1):
                     print(f"{num}.) {file}")
-        
+
+            try:
+                
+                # Allow users to choose category.
+                select_category = int(input("\nEnter the number of chosen category: "))
+
+                # Access the category using index.
+                file_name = categories[select_category - 1]
+
+                # Add note that the file is successfully chosen.
+                print(f"\n{file_name.title()} is successfully chosen.\n")
+
+            except ValueError:
+                print("\nInvalid Input. Please, try again.\n")
+
         # if users choose 3 they will be able to leave the program.
         elif choice == 3:
             break
