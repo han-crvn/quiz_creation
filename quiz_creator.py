@@ -1,6 +1,8 @@
 # Import libraries that will be needed.
 import os
 
+print("Hello! This is Quizzo.")
+
 while True:
     try:
         print("\nSelection:")
@@ -109,7 +111,7 @@ while True:
 
         # if users choose 3 they will be able to leave the program.
         elif choice == 3:
-            print("Goodbye!")
+            print("Goodbye! Thank you for using Quizzo.")
             break
 
     #Catch Invalid input.
