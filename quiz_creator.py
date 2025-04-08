@@ -5,17 +5,18 @@ print("Hello! This is Quizzo.")
 
 while True:
     try:
+        # Display the selection.
         print("\nSelection:")
         print("1. Add Category \n2. Access a category \n3. Exit \n")
 
         # Allow users to interact with the option.
-        choice = int(input("Enter a number of your choice: "))
+        choice = int(input("Enter the number of your choice: "))
     
         # If users choose 1 allow them to add category.
         if choice == 1:
             
             # Allow users to add the name of the category
-            category = input("\nEnter the name of category: ")
+            category = input("\nEnter the name of the category: ")
 
             # Format the category name to its file name.
             file_name = "_".join(category.lower().split()) + ".txt"
@@ -50,7 +51,7 @@ while True:
             try:
                 
                 # Allow users to choose category.
-                select_category = int(input("\nEnter the number of chosen category: "))
+                select_category = int(input("\nEnter the number of the chosen category: "))
 
                 # Access the category using index.
                 file_name = categories[select_category - 1]
@@ -100,11 +101,15 @@ while True:
                         # Validate their decision
                         if ask_user == 1:
                             continue
+
                         elif ask_user == 2:
                             break
 
+                        else:
+                            print("Invalid input! Please, try again.\n")
+
                     except ValueError:
-                        print("\n Invalid input. Please try, again.\n")
+                        print("\n Invalid input. Please, try again.\n")
 
             except ValueError:
                 print("\nInvalid Input. Please, try again.\n")
