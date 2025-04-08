@@ -3,7 +3,7 @@ import os
 
 while True:
     try:
-        print("Selection:")
+        print("\nSelection:")
         print("1. Add Category \n2. Access a category \n3. Exit \n")
 
         # Allow users to interact with the option.
@@ -86,10 +86,23 @@ while True:
 
                     # Catch the invalid answer.
                     else:
-                        print("Input a valid letter")
+                        print("Input a valid letter\n")
 
                     # Inform the users that the message is successfully added.
-                    print("The question set is successfully added.")
+                    print("The question set is successfully added.\n")
+
+                    # Ask users if they want to add more.
+                    try:
+                        ask_user = int(input("Do you want to input another set of question (1 = Yes, 2 = No): "))
+
+                        # Validate their decision
+                        if ask_user == 1:
+                            continue
+                        elif ask_user == 2:
+                            break
+
+                    except ValueError:
+                        print("\n Invalid input. Please try, again.\n")
 
             except ValueError:
                 print("\nInvalid Input. Please, try again.\n")
