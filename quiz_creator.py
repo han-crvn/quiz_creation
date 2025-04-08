@@ -109,6 +109,7 @@ while True:
 
         # if users choose 3 they will be able to leave the program.
         elif choice == 3:
+            print("Goodbye!")
             break
 
     #Catch Invalid input.
