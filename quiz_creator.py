@@ -1,6 +1,15 @@
 # Import libraries that will be needed.
 
 # Allow users to interact with the option.
+while True:
+    try:
+        print("Selection:")
+        print("1. Add Category \n2. Access a category \n3. Exit \n")
+
+        choice = int(input("Enter a number of your choice: "))
+    
+    except ValueError:
+        break
 
 # If users choose 1 allow them to add category.
 
