@@ -24,6 +24,9 @@ while True:
             myFile.write(f"===== {category.upper()} =====")
             myFile.close()
 
+            # Add a short description that the file is successfully added.
+            print(f"{category} is successfully saved as {file_name}.")
+            
         # If users choose 2 allow them to access file and add questions.
         if choice == 2:
             pass
