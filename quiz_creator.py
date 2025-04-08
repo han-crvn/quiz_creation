@@ -10,7 +10,9 @@ while True:
     
         # If users choose 1 allow them to add category.
         if choice == 1:
-            pass
+            
+            # Allow users to add the name of the category
+            category = input("Enter the name of category: ")
         
         # If users choose 2 allow them to access file and add questions.
         if choice == 2:
@@ -22,4 +24,4 @@ while True:
 
     #Catch Invalid input.
     except ValueError:
-        print("Invalid Input. Please, try again.")
+        print("\nInvalid Input. Please, try again.\n")
