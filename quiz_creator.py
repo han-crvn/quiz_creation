@@ -13,7 +13,17 @@ while True:
             
             # Allow users to add the name of the category
             category = input("Enter the name of category: ")
-        
+
+            # Format the category name to its file name.
+            file_name = "_".join(category.lower().split()) + ".txt"
+
+            # Create the txt file of category.
+            myFile = open(f"category_{file_name}", "w")
+
+            # In the first line of txt file, add the name of category.
+            myFile.write(f"===== {category.upper()} =====")
+            myFile.close()
+
         # If users choose 2 allow them to access file and add questions.
         if choice == 2:
             pass
