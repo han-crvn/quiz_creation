@@ -69,7 +69,7 @@ while True:
                     file_name = categories[select_category - 1]
 
                     # Add note that the file is successfully chosen.
-                    print(f"\n{file_name.title()} is successfully chosen.\n")
+                    print(f"\n{file_name} is successfully chosen.\n")
 
                     while True:
 
