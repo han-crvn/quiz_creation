@@ -8,7 +8,7 @@ while True:
         
         # Display the selection.
         print("\nSelection:")
-        print("1. Add Category \n2. Access a category \n3. Exit \n")
+        print("1. Add category \n2. Access a category \n3. Exit \n")
 
         # Allow users to interact with the option.
         choice = int(input("Enter the number of your choice: "))
@@ -103,7 +103,7 @@ while True:
                             
                             # Catch the invalid answer.
                             else:
-                                print("Input a valid letter\n")
+                                print("Input a valid letter.\n")
 
                         # Inform the users that the message is successfully added.
                         print("The question set is successfully added.\n")
