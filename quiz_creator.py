@@ -14,7 +14,6 @@ while True:
     
         # If users choose 1 allow them to add category.
         if choice == 1:
-            
             while True:
 
                 # Allow users to add the name of the category
@@ -55,7 +54,6 @@ while True:
                     print(f"{num}.) {file}")
 
             while True:
-
                 try:
                     
                     # Allow users to choose category.
