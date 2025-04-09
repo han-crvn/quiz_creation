@@ -37,14 +37,14 @@ while True:
             # Access the category files.
             categories = [file for file in os.listdir() if file.startswith("category")]
 
-            # Check if their is present categories or not.
+            # Check if there is a present categories or not.
             if not categories:
                 print("\nThere are currently no categories present in this program.\n")
 
             if categories:
                 print("\nCurrent Categories: ")
 
-                # List down the categories
+                # List down the categories.
                 for num, file in enumerate(categories, 1):
                     print(f"{num}.) {file}")
 
@@ -78,7 +78,7 @@ while True:
                         access_file.write(f"{chr(65 + i)}.) {choice}\n")
                         access_file.close()
 
-                    # Allow users to input the correct answer
+                    # Allow users to input the correct answer.
                     answer = input("Enter the correct letter(answer): ")
 
                     # Add the answer in file.
@@ -98,7 +98,7 @@ while True:
                     try:
                         ask_user = int(input("Do you want to input another set of question (1 = Yes, 2 = No): "))
 
-                        # Validate their decision
+                        # Validate their decision.
                         if ask_user == 1:
                             continue
 
@@ -108,9 +108,11 @@ while True:
                         else:
                             print("Invalid input! Please, try again.\n")
 
+                     # Catch Invalid input.
                     except ValueError:
                         print("\n Invalid input. Please, try again.\n")
 
+            # Catch Invalid input.
             except ValueError:
                 print("\nInvalid Input. Please, try again.\n")
 
@@ -119,6 +121,6 @@ while True:
             print("Goodbye! Thank you for using Quizzo.")
             break
 
-    #Catch Invalid input.
+    # Catch Invalid input.
     except ValueError:
         print("\nInvalid Input. Please, try again.\n")
