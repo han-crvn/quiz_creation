@@ -90,18 +90,21 @@ while True:
                             access_file.write(f"{chr(65 + i)}.) {choice}\n")
                             access_file.close()
 
-                        # Allow users to input the correct answer.
-                        answer = input("Enter the correct letter(answer): ")
+                        while True:
+                            
+                            # Allow users to input the correct answer.
+                            answer = input("Enter the correct letter(answer): ").upper()
 
-                        # Add the answer in file.
-                        if answer == "A" or answer == "B" or answer == "C" or answer == "D":
-                            access_file = open(file_name, "a")
-                            access_file.write(f"Answer: {answer}\n\n")
-                            access_file.close()
-
-                        # Catch the invalid answer.
-                        else:
-                            print("Input a valid letter\n")
+                            # Add the answer in file.
+                            if answer == "A" or answer == "B" or answer == "C" or answer == "D":
+                                access_file = open(file_name, "a")
+                                access_file.write(f"Answer: {answer}\n\n")
+                                access_file.close()
+                                break
+                            
+                            # Catch the invalid answer.
+                            else:
+                                print("Input a valid letter\n")
 
                         # Inform the users that the message is successfully added.
                         print("The question set is successfully added.\n")
