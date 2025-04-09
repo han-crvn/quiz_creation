@@ -5,6 +5,7 @@ print("Hello! This is Quizzo.")
 
 while True:
     try:
+        
         # Display the selection.
         print("\nSelection:")
         print("1. Add Category \n2. Access a category \n3. Exit \n")
@@ -133,6 +134,9 @@ while True:
         elif choice == 3:
             print("Goodbye! Thank you for using Quizzo.")
             break
+
+        else:
+            print("Invalid input! Please, try again.\n")
 
     # Catch Invalid input.
     except ValueError:
