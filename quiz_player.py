@@ -38,6 +38,14 @@ while True:
                 for num, file in enumerate(categories, 1):
                     print(f"{num}.) {file}")
 
+                try:
+                    # Allow users to input their choice.
+                    select_category = int(input("\nEnter the number of the chosen category (enter 0 to exit): "))
+                
+                # Catch invalid input.
+                except ValueError:
+                    print("\nInvalid input! Try again.")
+
         # If users choose option 2, allow users to leave the program.
         if choice == 2:
             break
