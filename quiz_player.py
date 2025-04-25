@@ -96,6 +96,19 @@ while True:
                             # Allow users to input their answers.
                             guess = input("Your answer (A/B/C/D): ").strip().upper()
 
+                            # Check if their answers is correct or not, if right  +1 to the score.
+                            if guess == answer:
+                                    print("Correct!\n")
+                                    score += 1
+                            else:
+                                print(f"Wrong! The correct answer is {answer}.\n")
+
+                            # Add the total items of questions.
+                            total += 1
+
+                            # Print the users score.
+                            print(f"Score: {score}/{total}\n")
+
                     # Catch invalid option.
                     else:
                         print("\nInvalid number! Try again.")
