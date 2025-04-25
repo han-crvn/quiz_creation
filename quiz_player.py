@@ -6,8 +6,28 @@ import time
 score = 0
 total = 0
 
-# Allow users to choose between the option.
+# Short Greetings.
+print("Hello to Quizzo!")
 
-# If users choose option 1, allow users to choose and answer the quiz.
+# Allow users to choose between the options.
+while True:
+    
+    # Print the menu.
+    print("\n==== MENU ====")
+    print("\n1. Choose quiz category. \n2. Exit.")
 
-# If users choose option 2, allow users to leave the program.
+    try:
+        # Allow users  to choose from the options.
+        choice = int(input("\nEnter your choice: "))
+
+        # If users choose option 1, allow users to choose and answer the quiz.
+        if choice == 1:
+            pass
+
+        # If users choose option 2, allow users to leave the program.
+        if choice == 2:
+            break
+    
+    # Catch invalid input.
+    except ValueError:
+        print("\nInvalid input! try again.")
