@@ -28,11 +28,11 @@ while True:
                 file_name = "_".join(category.lower().split()) + ".txt"
 
                 # Create the txt file of category.
-                myFile = open(f"category_{file_name}", "w")
+                my_file = open(f"category_{file_name}", "w")
 
                 # In the first line of txt file, add the name of category.
-                myFile.write(f"===== {category.upper()} =====")
-                myFile.close()
+                my_file.write(f"===== {category.upper()} =====")
+                my_file.close()
 
                 # Add a short description that the file is successfully added.
                 print(f"\n{category} is successfully saved as {file_name}.\n")
