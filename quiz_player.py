@@ -106,8 +106,12 @@ while True:
                             # Add the total items of questions.
                             total += 1
 
+                            # Average of their score.
+                            average = (score / total) * 100
+
                             # Print the users score.
-                            print(f"Score: {score}/{total}\n")
+                            print(f"Score: {score}/{total}")
+                            print(f"Average: {average:.0f}%\n")
 
                     # Catch invalid option.
                     else:
