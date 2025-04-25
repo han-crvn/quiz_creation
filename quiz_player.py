@@ -63,6 +63,37 @@ while True:
                         access_data = read_category.read().strip().split("\n\n")
                         read_category.close()
                         
+                        # Strip the file category.
+                        for data in access_data:
+                            lines = data.strip().split("\n")
+
+                            if not lines:
+                                continue
+                            
+                            # Check if there is a questions.
+                            question_lines = [line for line in lines if line.startswith("Question:")]
+                            if not question_lines:
+                                continue
+                            
+                            # Strip down the questions, choices, and answers.
+                            question = question_lines[0][9:].strip()
+                            choices = [line for line in lines if line.startswith(("A.", "B.", "C.", "D."))]
+                            answer_lines = [line for line in lines if line.startswith("Answer:")]
+
+                            if not answer_lines:
+                                continue
+                            
+                            # Strip answers.
+                            answer = answer_lines[0][-1].strip().upper()
+
+                            # Print the question.
+                            print("\n" + question)
+
+                            # Print the choices
+                            for choice_text in choices:
+                                print(choice_text)
+                            
+
                     # Catch invalid option.
                     else:
                         print("\nInvalid number! Try again.")

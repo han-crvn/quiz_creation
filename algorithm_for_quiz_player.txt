@@ -1,0 +1,11 @@
+First Algorithm for Quiz Player:
+
+1. Import libraries that will be needed.
+2. Allow users to choose between the three option (Choose Category and Exit).
+3. If users choose choose category.
+    3.1. Allow users to choose between the quiz categories.
+    3.2. Allow users to input their name.
+    3.3. Allow users to answer the questions and check their answers.
+    3.4. Print the result and collect the data which will be saved to another txt file.
+4. If users choose to exit.
+    4.1. Allow users to exit the program.
