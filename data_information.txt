@@ -1,1 +1,8 @@
 ===== DATA INFORMATION =====
+
+Name: Shane
+Category: Science
+Time: Fri Apr 25 18:56:08 2025
+Score: 0
+Average: 0.0 %
+

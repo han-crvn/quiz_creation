@@ -111,7 +111,19 @@ while True:
 
                             # Print the users score.
                             print(f"Score: {score}/{total}")
-                            print(f"Average: {average:.0f}%\n")
+                            print(f"Average: {average:.0f} %\n")
+
+                            # Record the data in data_information.txt.
+                            add_data = open("data_information.txt", "a")
+                            add_data.write(f"Name: {name.title()}\n")
+                            add_data.write(f"Category: {file_name.replace('category_', '').replace('.txt', '').title()}\n")
+                            add_data.write(f"Time: {local_time}\n")
+                            add_data.write(f"Score: {score}\n")
+                            add_data.write(f"Average: {average} %\n\n")
+                            add_data.close()
+                            
+                            # Exit option 1.
+                            break
 
                     # Catch invalid option.
                     else:
