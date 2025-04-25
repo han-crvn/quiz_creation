@@ -55,6 +55,9 @@ while True:
                         # Add note that the file successfully access.
                         print(f"\n{file_name} is successfully chosen.\n")
 
+                        # Allow users to input their name.
+                        name = input("Enter your name: ")
+
                     
                     # Catch invalid option.
                     else:
