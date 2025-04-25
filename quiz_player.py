@@ -93,6 +93,8 @@ while True:
                             for choice_text in choices:
                                 print(choice_text)
                             
+                            # Allow users to input their answers.
+                            guess = input("Your answer (A/B/C/D): ").strip().upper()
 
                     # Catch invalid option.
                     else:
