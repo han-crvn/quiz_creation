@@ -22,7 +22,21 @@ while True:
 
         # If users choose option 1, allow users to choose and answer the quiz.
         if choice == 1:
-            pass
+            
+            # Access the txt file of categories.
+            categories = [file for file in os.listdir() if file.startswith("category")]
+
+            # Check if there is a txt file created.
+            if not categories:
+                print("\nThere are currently no categories present in this program.\n")
+                break
+
+            if categories:
+                print("\nCurrent Categories: ")
+
+                # List down the categories.
+                for num, file in enumerate(categories, 1):
+                    print(f"{num}.) {file}")
 
         # If users choose option 2, allow users to leave the program.
         if choice == 2:
