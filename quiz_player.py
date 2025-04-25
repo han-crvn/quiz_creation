@@ -48,7 +48,13 @@ while True:
                         break
                     
                     if 1 <= select_category <= len(categories):
-                        pass
+                        
+                        # Access the file chosen.
+                        file_name = categories[select_category - 1]
+
+                        # Add note that the file successfully access.
+                        print(f"\n{file_name} is successfully chosen.\n")
+
                     
                     # Catch invalid option.
                     else:
