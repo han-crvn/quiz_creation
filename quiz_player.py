@@ -41,7 +41,19 @@ while True:
                 try:
                     # Allow users to input their choice.
                     select_category = int(input("\nEnter the number of the chosen category (enter 0 to exit): "))
-                
+
+                    # Allow users to go back in menu.
+                    if select_category == 0:
+                        break
+                    
+                    if 1 <= select_category <= len(categories):
+                        pass
+                    
+                    # Catch invalid option.
+                    else:
+                        print("\nInvalid number! Try again.")
+                        continue
+
                 # Catch invalid input.
                 except ValueError:
                     print("\nInvalid input! Try again.")
