@@ -5,6 +5,7 @@ import time
 # Add variables for score and total of quiz.
 score = 0
 total = 0
+local_time = time.ctime()
 
 # Short Greetings.
 print("Hello to Quizzo!")
