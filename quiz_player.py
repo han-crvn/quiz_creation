@@ -58,7 +58,11 @@ while True:
                         # Allow users to input their name.
                         name = input("Enter your name: ")
 
-                    
+                        # Access the question set of the categories.
+                        read_category = open(file_name, "r")
+                        access_data = read_category.read().strip().split("\n\n")
+                        read_category.close()
+                        
                     # Catch invalid option.
                     else:
                         print("\nInvalid number! Try again.")
